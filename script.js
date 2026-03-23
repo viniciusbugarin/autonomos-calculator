@@ -18,6 +18,9 @@ function calculate() {
     let tax = profit * irpfRate;
 
     let net = profit - tax;
+    if (profit < 0) {
+      document.getElementById("profit").style.color = "red";
+    }
 
     document.getElementById("fee").innerText = fee.toFixed(2) + "€";
     document.getElementById("profit").innerText = profit.toFixed(2) + "€";
