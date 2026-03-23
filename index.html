@@ -14,17 +14,19 @@
   <h1>Calculadora Autónomos España</h1>
   <p>Calcula tu cuota, impuestos y beneficio real</p>
 </section>
-
+<p class="info">
+Calcula de forma aproximada tu cuota de autónomos, impuestos y beneficio mensual según tus ingresos y gastos.
+</p>
 <section class="calculator">
 
   <div class="form">
     <h2>Datos</h2>
 
     <label>Ingresos mensuales (€)</label>
-    <input type="number" id="income" placeholder="2000">
+    <input type="number" id="income" placeholder="Ej: 2000€">
 
     <label>Gastos mensuales (€)</label>
-    <input type="number" id="expenses" placeholder="500">
+    <input type="number" id="expenses" placeholder="Ej: 500€">
 
     <label>Tarifa plana</label>
     <select id="flat">
@@ -32,19 +34,32 @@
       <option value="no">No</option>
     </select>
 
-    <button onclick="calculate()">Calcular</button>
+    <button onclick="calculate()">Calcular resultado</button>
   </div>
 
   <div class="results">
     <h2>Resultados</h2>
 
-    <p>💸 Cuota autónomos: <span id="fee">-</span></p>
-    <p>📊 IRPF estimado: <span id="tax">-</span></p>
-    <p>💰 Neto mensual: <span id="net">-</span></p>
+    <div class="result-box">
+      <h3>💸 Cuota</h3>
+      <p id="fee"></p>
+    </div>
+    
+    <div class="result-box">
+      <h3>📊 IRPF</h3>
+      <p id="tax"></p>
+    </div>
+    
+    <div class="result-box">
+      <h3>💰 Neto</h3>
+      <p id="net"></p>
+    </div>
   </div>
 
 </section>
-
+<p class="disclaimer">
+*Los resultados son orientativos y no sustituyen asesoramiento fiscal profesional.
+</p>
 <script src="script.js"></script>
 
 </body>
