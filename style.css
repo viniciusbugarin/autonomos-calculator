@@ -36,3 +36,23 @@ button {
   color: white;
   cursor: pointer;
 }
+.result-box {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  border: 1px solid #334155;
+}
+
+.result-box p {
+  font-size: 22px;
+  font-weight: bold;
+}
+.form, .results {
+  transition: 0.3s;
+}
+
+.form:hover, .results:hover {
+  transform: translateY(-5px);
+}
