@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Autónomos España</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Calculadora Autónomos España</h1>
+  <p>Calcula tu cuota, impuestos y beneficio real</p>
+</section>
+
+<section class="calculator">
+
+  <div class="form">
+    <h2>Datos</h2>
+
+    <label>Ingresos mensuales (€)</label>
+    <input type="number" id="income" placeholder="2000">
+
+    <label>Gastos mensuales (€)</label>
+    <input type="number" id="expenses" placeholder="500">
+
+    <label>Tarifa plana</label>
+    <select id="flat">
+      <option value="yes">Sí (80€)</option>
+      <option value="no">No</option>
+    </select>
+
+    <button onclick="calculate()">Calcular</button>
+  </div>
+
+  <div class="results">
+    <h2>Resultados</h2>
+
+    <p>💸 Cuota autónomos: <span id="fee">-</span></p>
+    <p>📊 IRPF estimado: <span id="tax">-</span></p>
+    <p>💰 Neto mensual: <span id="net">-</span></p>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
