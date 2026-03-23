@@ -5,20 +5,28 @@
   <title>Calculadora Autónomos España</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="Calcula tu cuota de autónomos, IRPF y beneficio real en España.">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
   <h1>Calcula cuánto ganas realmente como autónomo</h1>
-  <p>Calcula tu cuota, impuestos y beneficio real</p>
+  <p>Descubre tu cuota, impuestos y beneficio mensual en segundos</p>
 </section>
+
+<!-- INFO -->
 <p class="info">
-Calcula de forma aproximada tu cuota de autónomos, impuestos y beneficio mensual según tus ingresos y gastos.
+Calculadora orientativa para estimar ingresos reales como autónomo en España.
 </p>
+
+<!-- CALCULADORA -->
 <section class="calculator">
 
+  <!-- FORM -->
   <div class="form">
     <h2>Datos</h2>
 
@@ -34,39 +42,50 @@ Calcula de forma aproximada tu cuota de autónomos, impuestos y beneficio mensua
       <option value="no">No</option>
     </select>
 
-    <button onclick="calculate()">Calcular resultado</button>
+    <button id="calc-btn" onclick="calculate()">Calcular resultado</button>
   </div>
 
+  <!-- RESULTADOS -->
   <div class="results">
-    <h2>Resultados</h2>
 
     <div class="result-box">
       <h3>💸 Cuota</h3>
-      <p id="fee"></p>
+      <p id="fee">-</p>
     </div>
-    
+
+    <div class="result-box">
+      <h3>📈 Beneficio antes impuestos</h3>
+      <p id="profit">-</p>
+    </div>
+
     <div class="result-box">
       <h3>📊 IRPF</h3>
-      <p id="tax"></p>
+      <p id="tax">-</p>
     </div>
-    
+
     <div class="result-box">
       <h3>💰 Neto</h3>
-      <p id="net"></p>
+      <p id="net">-</p>
     </div>
-    <div class="result-box">
-      <h3>📈 Beneficio antes de impuestos:</h3>
-      <p id="profit"></p>
-    </div>
+
   </div>
 
 </section>
-  <p class="small">
-  Herramienta orientativa basada en estimaciones estándar en España.
-  </p>
+
+<!-- FEATURES -->
+<section class="features">
+  <ul>
+    <li>✔ Cálculo rápido en segundos</li>
+    <li>✔ Estimación realista</li>
+    <li>✔ Pensado para autónomos en España</li>
+  </ul>
+</section>
+
+<!-- DISCLAIMER -->
 <p class="disclaimer">
 *Los resultados son orientativos y no sustituyen asesoramiento fiscal profesional.
 </p>
+
 <script src="script.js"></script>
 
 </body>
