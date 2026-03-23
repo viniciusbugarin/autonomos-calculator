@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Autónomos España</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Calcula tu cuota de autónomos, IRPF y beneficio real en España.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Calcula cuánto ganas realmente como autónomo</h1>
+  <p>Descubre tu cuota, impuestos y beneficio mensual en segundos</p>
+</section>
+
+<!-- INFO -->
+<p class="info">
+Calculadora orientativa para estimar ingresos reales como autónomo en España.
+</p>
+
+<!-- CALCULADORA -->
+<section class="calculator">
+
+  <!-- FORM -->
+  <div class="form">
+    <h2>Datos</h2>
+
+    <label>Ingresos mensuales (€)</label>
+    <input type="number" id="income" placeholder="Ej: 2000€">
+
+    <label>Gastos mensuales (€)</label>
+    <input type="number" id="expenses" placeholder="Ej: 500€">
+
+    <label>Tarifa plana</label>
+    <select id="flat">
+      <option value="yes">Sí (80€)</option>
+      <option value="no">No</option>
+    </select>
+
+    <button id="calc-btn" onclick="calculate()">Calcular resultado</button>
+  </div>
+
+  <!-- RESULTADOS -->
+  <div class="results">
+
+    <div class="result-box">
+      <h3>💸 Cuota</h3>
+      <p id="fee">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>📈 Beneficio antes impuestos</h3>
+      <p id="profit">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>📊 IRPF</h3>
+      <p id="tax">-</p>
+    </div>
+
+    <div class="result-box">
+      <h3>💰 Neto</h3>
+      <p id="net">-</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <ul>
+    <li>✔ Cálculo rápido en segundos</li>
+    <li>✔ Estimación realista</li>
+    <li>✔ Pensado para autónomos en España</li>
+  </ul>
+</section>
+
+<!-- DISCLAIMER -->
+<p class="disclaimer">
+*Los resultados son orientativos y no sustituyen asesoramiento fiscal profesional.
+</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
