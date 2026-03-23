@@ -20,7 +20,9 @@ function calculate() {
     let net = profit - tax;
     if (profit < 0) {
       document.getElementById("profit").style.color = "red";
-    }
+    } else {
+      document.getElementById("profit").style.color = "white";
+      }
 
     document.getElementById("fee").innerText = fee.toFixed(2) + "€";
     document.getElementById("profit").innerText = profit.toFixed(2) + "€";
