@@ -1,15 +1,23 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #0f172a;
   color: white;
   margin: 0;
 }
 
+/* HERO */
 .hero {
   text-align: center;
-  padding: 60px;
+  padding: 60px 20px;
 }
 
+/* INFO */
+.info {
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* CALCULADORA */
 .calculator {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -19,23 +27,40 @@ body {
 
 .form, .results {
   background: #1e293b;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
+  transition: 0.3s;
 }
 
+.form:hover, .results:hover {
+  transform: translateY(-5px);
+}
+
+/* INPUTS */
 input, select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
 }
 
+/* BOTÓN */
 button {
-  padding: 10px;
+  padding: 12px;
   background: #3b82f6;
   border: none;
   color: white;
   cursor: pointer;
+  transition: 0.3s;
 }
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(59,130,246,0.5);
+}
+
+/* RESULTADOS */
 .result-box {
   background: #0f172a;
   padding: 20px;
@@ -43,16 +68,44 @@ button {
   margin-bottom: 15px;
   text-align: center;
   border: 1px solid #334155;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.result-box.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .result-box p {
   font-size: 22px;
   font-weight: bold;
 }
-.form, .results {
-  transition: 0.3s;
+
+/* FEATURES */
+.features {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.form:hover, .results:hover {
-  transform: translateY(-5px);
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .calculator {
+    grid-template-columns: 1fr;
+  }
 }
