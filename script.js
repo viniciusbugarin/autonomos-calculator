@@ -17,3 +17,13 @@ function calculate() {
   document.getElementById("tax").innerText = tax.toFixed(2) + "€";
   document.getElementById("net").innerText = net.toFixed(2) + "€";
 }
+document.querySelectorAll(".result-box").forEach(el => {
+  el.classList.add("show");
+});
+const btn = document.querySelector("button");
+
+btn.innerText = "Calculando...";
+setTimeout(() => {
+  btn.innerText = "Calcular resultado";
+}, 800);
+document.getElementById("profit").innerText = profit.toFixed(2) + "€";
