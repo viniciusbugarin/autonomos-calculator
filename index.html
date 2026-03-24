@@ -4,31 +4,29 @@
   <meta charset="UTF-8">
   <title>Calculadora Autónomos España</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="description" content="Calcula tu cuota de autónomos, IRPF y beneficio real en España.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232563eb'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='white'>A</text></svg>">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <h1>Calcula cuánto ganas realmente como autónomo</h1>
   <p>Descubre tu cuota, impuestos y beneficio mensual en segundos</p>
 </section>
 
-<!-- INFO -->
 <p class="info">
 Calculadora orientativa para estimar ingresos reales como autónomo en España.
 </p>
 
-<!-- CALCULADORA -->
 <section class="calculator">
 
   <!-- FORM -->
   <div class="form">
     <h2>Datos</h2>
+
+    <p id="error" class="error"></p>
 
     <label>Ingresos mensuales (€)</label>
     <input type="number" id="income" placeholder="Ej: 2000€">
@@ -41,12 +39,12 @@ Calculadora orientativa para estimar ingresos reales como autónomo en España.
       <option value="yes">Sí (80€)</option>
       <option value="no">No</option>
     </select>
-    <p id="error" class="error"></p>
+
     <button id="calc-btn" onclick="calculate()">Calcular resultado</button>
   </div>
 
   <!-- RESULTADOS -->
-  <div class="results">
+  <div class="results" id="results">
 
     <div class="result-box">
       <h3>💸 Cuota</h3>
@@ -68,11 +66,14 @@ Calculadora orientativa para estimar ingresos reales como autónomo en España.
       <p id="net">-</p>
     </div>
 
+    <p class="hint">
+      💡 Mejora tu beneficio reduciendo gastos o aumentando ingresos.
+    </p>
+
   </div>
 
 </section>
 
-<!-- FEATURES -->
 <section class="features">
   <ul>
     <li>✔ Cálculo rápido en segundos</li>
@@ -81,7 +82,6 @@ Calculadora orientativa para estimar ingresos reales como autónomo en España.
   </ul>
 </section>
 
-<!-- DISCLAIMER -->
 <p class="disclaimer">
 *Los resultados son orientativos y no sustituyen asesoramiento fiscal profesional.
 </p>
