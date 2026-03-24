@@ -9,20 +9,26 @@ function calculate() {
     const income = parseFloat(document.getElementById("income").value) || 0;
     const expenses = parseFloat(document.getElementById("expenses").value) || 0;
     const flat = document.getElementById("flat").value;
-
+    const error = document.getElementById("error");
+    
     let fee = flat === "yes" ? 80 : 300;
 
     let profit = income - expenses - fee;
 
-    let irpfRate = 0.15;
-    let tax = profit * irpfRate;
+    let tax = profit > 0 ? profit * 0.15 : 0;
 
     let net = profit - tax;
-    if (profit < 0) {
-      document.getElementById("profit").style.color = "red";
+    if (!income || !expenses) {
+      error.innerText = "Introduce ingresos y gastos";
+      return;
     } else {
-      document.getElementById("profit").style.color = "white";
-      }
+      error.innerText = "";
+    }
+    if (profit < 0) {
+      document.getElementById("net").style.color = "red";
+    } else {
+      document.getElementById("net").style.color = "#22c55e";
+    }
 
     document.getElementById("fee").innerText = fee.toFixed(2) + "€";
     document.getElementById("profit").innerText = profit.toFixed(2) + "€";
