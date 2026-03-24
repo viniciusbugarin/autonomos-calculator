@@ -61,6 +61,15 @@ button:hover {
 }
 
 /* RESULTADOS */
+.results {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.results.show {
+  opacity: 1;
+}
+
 .result-box {
   background: #0f172a;
   padding: 20px;
@@ -84,10 +93,21 @@ button:hover {
   font-weight: bold;
 }
 
+/* ERROR */
+.error {
+  color: #ef4444;
+  font-size: 14px;
+}
+
+/* HINT */
+.hint {
+  text-align: center;
+  color: #94a3b8;
+}
+
 /* FEATURES */
 .features {
   text-align: center;
-  margin-top: 20px;
 }
 
 .features ul {
@@ -108,9 +128,4 @@ button:hover {
   .calculator {
     grid-template-columns: 1fr;
   }
-}
-.error {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 10px;
 }
